@@ -2,6 +2,9 @@
 
 
 
+https://github.com/tocjpapi/Modern-African-Art/assets/148444308/a723ab34-9b33-49ca-802a-ee365f288a3c
+
+
 # Modern African Art Showcase
 
 Welcome to the Modern African Art Showcase, a website dedicated to expressing the vibrant beauty and cultural significance of contemporary African art. This platform aims to fill the void in online representation, offering a comprehensive exploration of African artistry as it was meant to be experienced.
