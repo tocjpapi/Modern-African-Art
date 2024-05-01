@@ -18,6 +18,62 @@ To access the Modern African Art Showcase, you'll need:
 - A good web browser
 - Internet connectivity
 
+### Text Reveal Animation
+
+```
+<script>
+    const textReveals = document.querySelectorAll('.text__reveal');
+    
+    function animateTextReveal(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log(entry);
+                const spans = entry.target.querySelectorAll('span');
+                spans.forEach((span, idx) => {
+                    setTimeout(() => {
+                        span.style.transform = 'translateY(0)';
+                    }, (idx + 1) * 50);
+                });
+    
+                let startTime;
+                function animate(time) {
+                    if (!startTime) startTime = time;
+                    const progress = time - startTime;
+    
+                    spans.forEach((span, idx) => {
+                        const delay = (idx + 1) * 50;
+                        if (progress > delay) {
+                            span.style.transform = 'translateY(0)';
+                        }
+                    });
+    
+                    if (progress < spans.length * 50) {
+                        requestAnimationFrame(animate);
+                    }
+                }
+    
+                requestAnimationFrame(animate);
+            }
+        });
+    }
+    
+    const options = {
+        rootMargin: '0px',
+        threshold: 1.0
+    };
+    
+    const observe = new IntersectionObserver(animateTextReveal, options);
+    
+    textReveals.forEach(text => {
+        const string = text.innerText;
+        const spans = Array.from(string).map(char => `<span>${char}</span>`).join('');
+        text.innerHTML = spans;
+        observe.observe(text);
+    });
+    
+</script>
+```
+
 ### Installation
 
 This project doesn't require any installation. Simply download to start exploring the world of modern African art.
