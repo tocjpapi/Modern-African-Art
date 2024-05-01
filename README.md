@@ -110,4 +110,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgment
 - [CJ](https://www.instagram.com/varmoux/)
 
-  this was written early in my carreer so its not responsive.
+  this was written early in my career so it's just decently responsive.
