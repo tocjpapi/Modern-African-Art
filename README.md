@@ -21,6 +21,8 @@ To access the Modern African Art Showcase, you'll need:
 - A good web browser
 - Internet connectivity
 
+
+highlight feature.
 ### Text Reveal Animation
 
 ```
